@@ -1,4 +1,4 @@
-/* Bright blue clone of the original simple card layout */
+/* Blue theme centered layout */
 :root{
   --bg1:#e7f1ff;
   --bg2:#cde6ff;
@@ -16,13 +16,13 @@ html,body{height:100%%}
 body{
   margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Noto Sans KR, Apple SD Gothic Neo, sans-serif;
   background:linear-gradient(180deg,var(--bg1),var(--bg2));
-  display:grid; place-items:center;
-  color:var(--text);
 }
-
-.wrap{width:100%%; padding:24px}
+.center{
+  height:100%%; display:flex; align-items:center; justify-content:center;
+  padding:20px;
+}
 .card{
-  width: min(560px, 92vw);
+  width:min(520px, 92vw);
   background:var(--card);
   border-radius:16px;
   box-shadow:var(--shadow);

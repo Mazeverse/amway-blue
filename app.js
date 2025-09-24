@@ -29,7 +29,6 @@
   }
 
   reveal.addEventListener('click', ()=>{
-    // 번호를 최초 클릭시에만 생성해서 DOM에 삽입
     if (panel.hasAttribute('hidden')){
       panel.removeAttribute('hidden');
       reveal.setAttribute('aria-expanded','true');
@@ -38,15 +37,6 @@
       copyBtn.hidden = false;
       copyBtn.onclick = ()=>copy(n);
       numEl.onclick = ()=>copy(n);
-    } else {
-      // 원본 사이트가 토글이 아니라면 이 부분을 주석 처리할 수도 있음.
-      panel.setAttribute('hidden','');
-      reveal.setAttribute('aria-expanded','false');
-      // 숨김 시 DOM에서 제거해서 크롤링 방지
-      numEl.textContent = '';
-      copyBtn.hidden = true;
-      copyBtn.onclick = null;
-      numEl.onclick = null;
     }
   });
 })();
